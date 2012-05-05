@@ -23,10 +23,10 @@ By default, the eyepaste-mail interceptor munges all addresses. To allow some ad
 
 ```ruby
 # pass a regexp
-Eyepaste::Mail::Interceptor.set_white_list = /.+?@example.com/
+Eyepaste::Mail::Interceptor.set_white_list /.+?@example.com/
 
 # pass an array of regexps
-Eyepaste::Mail::Interceptor.set_white_list = [/.+?@example.com/, /^testing_.+?@example.com/]
+Eyepaste::Mail::Interceptor.set_white_list [/.+?@example.com/, /^testing_.+?@example.com/]
 
 # pass a block, it will be called every time a message is examined and munged
 Eyepaste::Mail::Interceptor.set_white_list do
@@ -40,7 +40,7 @@ To register the interceptor with the Mail gem, call:
 
 ```ruby
 # optionally define a white_list:
-Eyepaste::Mail::Interceptor.set_white_list = /.+?@example.com/
+Eyepaste::Mail::Interceptor.set_white_list /.+?@example.com/
 
 # register with Mail
 Mail.register_interceptor(Eyepaste::Mail::Interceptor)
@@ -55,7 +55,7 @@ To only munge emails in a particular environment, you can place the following in
 
 ```ruby
 # optionally define a white_list:
-Eyepaste::Mail::Interceptor.set_white_list = /.+?@example.com/
+Eyepaste::Mail::Interceptor.set_white_list /.+?@example.com/
 
 # register with ActionMailer::Base (which wraps the call to `Mail::register_interceptor`)
 ActionMailer::Base.register_interceptor(Eyepaste::Mail::Interceptor)
