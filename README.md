@@ -57,7 +57,7 @@ To only munge emails in a particular environment, you can place the following in
 # optionally define a white_list:
 Eyepaste::Mail::Interceptor.set_white_list /.+?@example.com/
 
-# register with ActionMailer::Base (which wraps the call to `Mail::register_interceptor`)
+# register with ActionMailer::Base (which wraps the call to Mail.register_interceptor)
 ActionMailer::Base.register_interceptor(Eyepaste::Mail::Interceptor)
 ```
 
