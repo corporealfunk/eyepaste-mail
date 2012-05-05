@@ -1,5 +1,5 @@
 module Eyepaste
   module Mail
-    VERSION = "0.0.1.pre"
+    VERSION = "0.0.1"
   end
 end

@@ -7,9 +7,9 @@ Gem::Specification.new do |s|
   s.version     = Eyepaste::Mail::VERSION
   s.authors     = ["Jon Moniaci"]
   s.email       = ["jonmoniaci [at] gmail.com"]
-  s.homepage    = "http://www.github.com/corporealfunk/eyepaste-mail"
-  s.summary     = %q{Works with Mail gem to send emails to eyepaste}
-  s.description = %q{Impelments an email interceptor to work with the Mail gem to faciliate sending emails to eyepaste in dev or staging environments}
+  s.homepage    = "https://github.com/corporealfunk/eyepaste-mail"
+  s.summary     = %q{Works with Mail gem to munge email 'To:' addresses into @eyepaste.com addresses}
+  s.description = %q{Implements an email interceptor which, when registered with the Mail gem, munges all "To:" email address to @eyepaste.com addresses. Especially helpful in dev or staging environments when you don't want emails delivered to actual addresses, but you may want to verify actual delivery.}
 
   s.rubyforge_project = "eyepaste-mail"
 
