@@ -2,6 +2,6 @@ require "eyepaste-mail/version"
 
 module Eyepaste
   module Mail
-    # Your code goes here...
+    require 'eyepaste-mail/interceptor.rb'
   end
 end
